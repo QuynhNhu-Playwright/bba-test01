@@ -1,5 +1,26 @@
-// function createCharacters = ();
-// characters = ['name','level', 'health']
+
+1.
+function createCharacters() {
+    const characters = [
+        { name: 'Như', level: 1, health: 200 },
+        { name: 'Châu', level: 2, health: 600 },
+        { name: 'Hoàng', level: 3, health: 700 }
+    ];
+
+    const charactersPowerUp = characters.map(ch => {
+        return {
+            name: ch.name.toUpperCase(),
+            level: ch.level * 2,
+            health: ch.health * 3
+        }
+    })
+    const possibleWinners = charactersPowerUp.filter(f => f.health > 1000)
+
+    console.log("result:", charactersPowerUp);
+    console.log("result 2:", possibleWinners);
+}
+
+createCharacters();
 
 
 
